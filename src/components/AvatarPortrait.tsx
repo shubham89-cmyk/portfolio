@@ -6,10 +6,6 @@ interface AvatarPortraitProps {
   alt: string
 }
 
-/**
- * Cursor-following avatar with layered parallax.
- * Transparent PNG so the chrome headline stays readable around the character.
- */
 export function AvatarPortrait({ src, alt }: AvatarPortraitProps) {
   const headX = useSpring(0, { stiffness: 55, damping: 18, mass: 0.85 })
   const headY = useSpring(0, { stiffness: 55, damping: 18, mass: 0.85 })
@@ -45,15 +41,12 @@ export function AvatarPortrait({ src, alt }: AvatarPortraitProps) {
   const faceTransform = useMotionTemplate`translate3d(${faceX}px, ${faceY}px, 0)`
 
   return (
-    <motion.div
-      className="relative mx-auto h-[clamp(200px,38vw,380px)] w-[clamp(160px,30vw,300px)]"
-      style={{ transform: headTransform }}
-    >
+    <motion.div className="relative aspect-[3/4] w-full" style={{ transform: headTransform }}>
       <motion.img
         src={src}
         alt={alt}
         draggable={false}
-        className="pointer-events-none absolute inset-0 h-full w-full select-none object-contain object-bottom drop-shadow-[0_24px_50px_rgba(0,0,0,0.65)]"
+        className="pointer-events-none absolute inset-0 h-full w-full select-none object-contain object-bottom drop-shadow-[0_28px_55px_rgba(0,0,0,0.7)]"
         style={{ transform: faceTransform }}
       />
     </motion.div>
