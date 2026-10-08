@@ -1,0 +1,166 @@
+{
+  "profile": {
+    "name": "Shubham Sonar",
+    "shortName": "Shubham",
+    "tagline": "Full-Stack Developer · Mobile & Web Engineer building production apps across iOS, Android, and the modern web.",
+    "role": "Senior Full-Stack Developer",
+    "specialization": "React Native · Angular · React · Node.js",
+    "location": "Surat, India · Remote-ready (UK / USA / EU)",
+    "yearsOfExperience": "5.5+",
+    "bio": "Results-driven Full-Stack Developer with 5.5+ years building high-quality web and mobile applications across iOS, Android, and modern web platforms. I deliver end-to-end solutions with React Native, Angular, React.js, and Node.js — from system design and feature engineering through deployment and post-launch optimization. Experienced across food delivery, fintech, dating, education, and e-commerce, with a strong focus on clean UI/UX, performance, and maintainable code. AWS Certified Solutions Architect – Associate.",
+    "avatarSvg": "/avatar.svg",
+    "social": {
+      "github": "",
+      "linkedin": "https://www.linkedin.com/in/shubham-sonar-87b438141/",
+      "instagram": "",
+      "email": "shubhamsonar89@gmail.com",
+      "phone": "+91 9687963823",
+      "website": ""
+    }
+  },
+  "skills": {
+    "categories": [
+      {
+        "name": "Mobile",
+        "items": [
+          "React Native",
+          "iOS (Xcode / Swift)",
+          "Android",
+          "App Store & Play Store",
+          "Push Notifications",
+          "Deep Linking"
+        ]
+      },
+      {
+        "name": "Frontend – Web",
+        "items": [
+          "Angular (v12+)",
+          "React.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "SCSS",
+          "Reanimated"
+        ]
+      },
+      {
+        "name": "Backend & APIs",
+        "items": [
+          "Node.js",
+          "Express.js",
+          "REST APIs",
+          "GraphQL",
+          "WebSocket",
+          "Firebase"
+        ]
+      },
+      {
+        "name": "State, Cloud & Process",
+        "items": [
+          "Redux Toolkit",
+          "MobX",
+          "NgRx",
+          "AWS (SAA)",
+          "CI/CD",
+          "Agile / Scrum"
+        ]
+      }
+    ]
+  },
+  "experience": [
+    {
+      "company": "Neorox LTD",
+      "role": "Senior Full-Stack Developer (React Native + Angular + Node.js)",
+      "period": "May 2024 — Present",
+      "location": "UK (Remote)",
+      "summary": "Architect and ship production-grade cross-platform mobile apps and Angular web dashboards for an active UK user base on iOS, Android, and browser.",
+      "highlights": [
+        "Built a real-time bidirectional chat system with WebSocket and Node.js — sub-100ms message delivery and higher live engagement.",
+        "Designed full-stack state management with Redux Toolkit (mobile) and NgRx (Angular web) for complex conversation and multi-step flows.",
+        "Developed and consumed REST/GraphQL APIs with OAuth, payment gateways, and FCM push via reusable service modules.",
+        "Led cross-team code reviews and architectural standards that improved consistency and cut post-release bugs."
+      ]
+    },
+    {
+      "company": "Extended Web AppTech LLP",
+      "role": "Software Engineer (React Native + React.js + Node.js)",
+      "period": "Jan 2020 — May 2024",
+      "location": "Surat, India | Remote",
+      "summary": "Joined via campus placement and progressed to lead a cross-functional team shipping features across React Native, React.js, and Node.js for multiple client products.",
+      "highlights": [
+        "Delivered full-stack solutions across food delivery, fintech, e-commerce, dating, and education domains.",
+        "Spearheaded a UI/UX overhaul (Angular + React.js) that improved retention and engagement across the product suite.",
+        "Integrated payment gateways and AI-driven recommendation APIs into e-commerce — higher conversion and AOV.",
+        "Established code review standards and sprint planning across concurrent mobile and web workstreams."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "onsfer",
+      "title": "Onsfer",
+      "subtitle": "Secure Document Wallet",
+      "description": "Production-grade secure digital wallet for UK users to store, manage, and retrieve personal documents and contracts. Custom client-side encryption with full upload, retrieval, and file management across React Native and Node.js.",
+      "stack": [
+        "React Native",
+        "TypeScript",
+        "Firebase",
+        "Node.js",
+        "Custom Encryption",
+        "Push Notifications",
+        "iOS"
+      ],
+      "role": "Full-stack engineer",
+      "year": "2024",
+      "link": "",
+      "image": "",
+      "highlight": true
+    },
+    {
+      "id": "vibe-social-music",
+      "title": "Vibe Social Music",
+      "subtitle": "Real-Time Music Social Platform",
+      "description": "Led technical development as primary full-stack engineer — real-time live chat (WebSocket + Node.js) on React Native and Angular, plus Feed API integration for live music trends with NgRx / Redux under load.",
+      "stack": [
+        "React Native",
+        "Angular",
+        "Node.js",
+        "WebSocket",
+        "REST APIs",
+        "NgRx",
+        "Redux"
+      ],
+      "role": "Primary full-stack engineer",
+      "year": "2024",
+      "link": "",
+      "image": "",
+      "highlight": false
+    },
+    {
+      "id": "ecommerce-ai",
+      "title": "E-Commerce Platform",
+      "subtitle": "AI-Powered Recommendations",
+      "description": "Responsive full-stack e-commerce with React.js storefront, Node.js/Express backend, and Angular admin dashboard. Integrated AI product recommendations and multiple payment gateways to lift conversion and average order value.",
+      "stack": [
+        "React.js",
+        "Node.js",
+        "REST APIs",
+        "Angular",
+        "Payment Gateways"
+      ],
+      "role": "Full-stack engineer",
+      "year": "2023",
+      "link": "",
+      "image": "",
+      "highlight": false
+    }
+  ],
+  "education": [
+    {
+      "school": "Jodhpur National University, India",
+      "degree": "B.Tech in Computer Engineering · GPA 8.0 / 10.0",
+      "period": "2021",
+      "location": "India"
+    }
+  ],
+  "testimonials": []
+}
