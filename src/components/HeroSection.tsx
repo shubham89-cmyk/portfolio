@@ -11,67 +11,63 @@ export function HeroSection() {
     <section id="home" className="relative min-h-svh overflow-hidden">
       <Navbar />
 
-      <div className="mx-auto flex min-h-[calc(100svh-4rem)] max-w-6xl flex-col items-center px-4 pb-12 pt-6 sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col items-center px-4 pb-16 pt-8 sm:px-6 sm:pt-12">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center text-sm tracking-[0.25em] text-[#8b9199]"
+          className="text-center text-xs tracking-[0.28em] text-[#8b9199] sm:text-sm"
         >
           {profile.role.toUpperCase()}
         </motion.p>
 
-        <div className="relative mt-4 flex w-full flex-1 flex-col items-center justify-center">
-          {/* Stacked composition: greeting clear, name bursts behind transparent avatar */}
-          <div className="relative flex w-full max-w-5xl flex-col items-center">
-            <p
-              className="hero-heading relative z-20 text-center font-medium leading-none"
-              style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)' }}
-            >
-              Hi, I&apos;m
-            </p>
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.05 }}
+          className="hero-heading mt-8 text-center font-medium leading-none"
+          style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}
+        >
+          Hi, I&apos;m
+        </motion.p>
 
-            <div className="relative mt-1 flex w-full items-center justify-center">
-              <h1
-                className="hero-heading relative z-0 w-full text-center font-semibold leading-[0.85] tracking-tight"
-                style={{ fontSize: 'clamp(3.5rem, 16vw, 13rem)' }}
-              >
-                {profile.shortName}
-              </h1>
-
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.08 }}
-                className="pointer-events-none absolute bottom-[-8%] left-1/2 z-10 w-[min(52%,340px)] -translate-x-1/2 sm:bottom-[-12%]"
-              >
-                <AvatarPortrait src={profile.avatarSvg} alt={`${profile.name} avatar`} />
-              </motion.div>
-            </div>
-
-            {/* Spacer so content below clears the overlapping avatar */}
-            <div className="h-[clamp(140px,28vw,260px)]" aria-hidden />
-          </div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.22 }}
-            className="relative z-20 mt-2 max-w-2xl text-center text-base text-[#c9ced6] sm:text-lg"
-            style={{ wordBreak: 'normal', overflowWrap: 'normal' }}
+        <div className="relative mt-2 w-full">
+          <h1
+            className="hero-heading relative z-0 w-full overflow-hidden text-center font-semibold leading-[0.82] tracking-tight"
+            style={{ fontSize: 'clamp(3.25rem, 14vw, 11rem)' }}
           >
-            {profile.tagline}
-          </motion.p>
+            {profile.shortName}
+          </h1>
 
+          {/* Sits under the name and only kisses the baseline — not the face or greeting */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.32 }}
-            className="relative z-20 mt-6"
+            transition={{ duration: 0.65, delay: 0.1 }}
+            className="relative z-10 mx-auto -mt-6 w-[min(168px,44vw)] sm:-mt-16 sm:w-[min(220px,34vw)] lg:-mt-28"
           >
-            <SocialLinks social={profile.social} variant="pills" />
+            <AvatarPortrait src={profile.avatarSvg} alt={`${profile.name} avatar`} />
           </motion.div>
         </div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="relative z-20 mt-6 max-w-2xl text-center text-base text-[#c9ced6] sm:mt-8 sm:text-lg"
+          style={{ wordBreak: 'normal', overflowWrap: 'normal' }}
+        >
+          {profile.tagline}
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.28 }}
+          className="relative z-20 mt-6"
+        >
+          <SocialLinks social={profile.social} variant="pills" />
+        </motion.div>
       </div>
     </section>
   )
