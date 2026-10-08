@@ -1,33 +1,30 @@
 import { motion } from 'framer-motion'
-import { usePortfolio } from '../hooks/usePortfolio'
 
 // TODO: move services rows into portfolio.json later
 const services = [
   {
-    title: 'Mobile',
+    title: 'Backend',
     description:
-      'React Native apps for iOS and Android — App Store / Play Store shipping, push notifications, deep linking, and smooth Reanimated UX.',
+      'Node.js / Express APIs, GraphQL, WebSocket realtime, Firebase, OAuth, and payment integrations that stay reliable under load.',
   },
   {
-    title: 'Frontend – Web',
+    title: 'AI/LLM',
     description:
-      'Angular and React.js dashboards and product UIs with TypeScript, Tailwind/SCSS, and state that stays fast under real usage.',
+      'AI-driven product features — recommendation APIs, intelligent workflows, and practical LLM integrations wired into real apps.',
   },
   {
-    title: 'Backend & Realtime',
+    title: 'Frontend',
     description:
-      'Node.js / Express APIs, GraphQL, WebSocket chat, Firebase Auth/Firestore/FCM, and payment / OAuth integrations.',
+      'React Native, React.js, and Angular UIs with TypeScript, Redux / NgRx, Tailwind/SCSS, and clean, performant component systems.',
   },
   {
-    title: 'Cloud & Delivery',
+    title: 'Cloud',
     description:
-      'AWS Certified Solutions Architect patterns, CI/CD, Agile leadership, code reviews, and remote-first delivery for UK / US / EU teams.',
+      'AWS Certified Solutions Architect delivery — CI/CD, Firebase, App Store / Play Store shipping, and remote-first cloud ops.',
   },
 ]
 
 export function ServicesSection() {
-  const { skills } = usePortfolio()
-
   return (
     <section id="skills" className="border-t border-[#1a1a1a] py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -57,18 +54,6 @@ export function ServicesSection() {
                 >
                   {service.description}
                 </p>
-                {skills.categories[index] && (
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {skills.categories[index].items.slice(0, 6).map((item) => (
-                      <span
-                        key={item}
-                        className="rounded-full border border-[#2a2a2a] px-3 py-1 text-xs text-[#aeb4bd]"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                )}
               </div>
             </motion.article>
           ))}

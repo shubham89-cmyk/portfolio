@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { usePortfolio } from '../hooks/usePortfolio'
+import { AvatarPortrait } from './AvatarPortrait'
 import { Navbar } from './Navbar'
 import { SocialLinks } from './SocialLinks'
 
@@ -22,7 +23,6 @@ export function HeroSection() {
           {profile.role.toUpperCase()}
         </motion.p>
 
-        {/* Headline row — avatar spans this + next row for the burst-through effect */}
         <div className="relative z-0 flex items-center justify-center overflow-hidden">
           <h1
             className="hero-heading whitespace-nowrap text-center font-semibold leading-none"
@@ -38,11 +38,7 @@ export function HeroSection() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="relative z-10 -mt-[clamp(5rem,18vw,12rem)] flex justify-center self-start"
         >
-          <img
-            src={profile.avatarSvg}
-            alt={`${profile.name} avatar`}
-            className="pointer-events-none h-[clamp(220px,42vw,420px)] w-auto select-none object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.55)]"
-          />
+          <AvatarPortrait src={profile.avatarSvg} alt={`${profile.name} avatar`} />
         </motion.div>
 
         <div className="relative z-10 flex flex-col items-center gap-6 pb-4">
